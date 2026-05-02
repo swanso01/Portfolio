@@ -1,0 +1,20 @@
+Project Performance Analysis
+
+This analysis shows the performance of Insertion Sort, Merge Sort, and Quick Sort on datasets of varying sizes
+Measured Results vs. Theoretical Expectations
+
+The measured runtimes match close with the theoretical Big-O of each algorithm. Insertion Sort's runtime grew quadratically (O(n^2)), becoming impractical for large datasets and requiring it to be skipped for n > 10,000. In contrast, Merge Sort and Quick Sort both demonstrated the efficiency of their O(n log n) average-case complexity, scaling effectively to handle one million words in a reasonable timeframe.
+
+Performance Changes with Input Size
+
+The impact of input size on performance was stark. For small inputs (n=10, 100), Insertion Sort's low overhead made it highly competitive, often matching or slightly beating the more complex recursive algorithms. As n increased to 1,000 and 10,000, the superior scaling of Merge Sort and Quick Sort became evident as they took the lead. For the largest inputs (n=100,000 and 1,000,000), they were orders of magnitude faster, solidifying the practical difference between a quadratic and a linearithmic growth rate.
+
+Algorithm Recommendation
+
+The best algorithm is highly dependent on the input size.
+For small inputs (n < 1,000), Insertion Sort is a viable and often excellent choice due to its simplicity and lack of recursive overhead.
+For large inputs (n >= 1,000), Quick Sort is generally the best performer. Its average-case speed is typically faster than Merge Sort's due to its in-place partitioning. Merge Sort remains a strong choice, especially if a worst-case performance guarantee is required.
+
+Interesting Behaviors
+
+No unexpected behaviors were observed. Quick Sort's performance remained consistent with its average case, suggesting the pivot selection strategy was effective for the given datasets. The primary observation was the dramatic real-world illustration of algorithmic complexity, where Insertion Sort's runtime exploded exactly as theory predicts.

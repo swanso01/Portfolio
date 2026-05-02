@@ -1,0 +1,28 @@
+Explanations 
+Task 1: Priority Queue (Sorted Linked List)Implementation: The insert method finds the correct sorted position for a new item based on its key, ensuring the list remains sorted. remove_min simply removes the head node, which is always the smallest item.Reasoning: Sorting on insertion makes removal $O(1)$, as the smallest item is always at the front.Pros/Cons: remove_min is $O(1)$, but insert is slow ($O(n)$) as it must traverse the list.Task 2: Deque (Doubly Linked List)Implementation: A doubly linked list is used, with head and tail pointers. Insertions and removals at the front modify the head, while operations at the rear modify the tail, updating prev and next pointers.Reasoning: A doubly linked list is the standard choice as it provides $O(1)$ access to both ends for all operations.Pros/Cons: All deque operations are $O(1)$. It uses slightly more memory per node for the prev pointer.Task 3: Circular ListImplementation: The list is managed by a single current reference, and the last node's next pointer points back to the first. Operations like insert and delete_next happen relative to the node after current.Reasoning: Using current.next as the target simplifies operations, as current provides the necessary reference to the "previous" node needed for modification.Pros/Cons: Efficient for round-robin tasks. Finding a specific item is $O(n)$ and operations can be confusing.Task 4: Stack (based on Circular List)Implementation: The stack reuses the CircularList. The "top" of the stack is defined as the node after current (current.next).Reasoning: push calls the list's insert, placing the new item at current.next. pop calls delete_next, removing the item at current.next, perfectly matching LIFO behavior.Pros/Cons: Provides $O(1)$ push and pop by reusing the list's methods. It is a very unconventional and non-intuitive way to build a stack.Test OutputTask 1: Priority Queue (Sorted List)
+Queue: (2: task A) -> (3: task B) -> (5: task C) -> (7: task D)
+Removed: task A
+Removed: task B
+Queue: (5: task C) -> (7: task D)
+
+Task 2: Deque (Doubly Linked List)
+Deque: 5 <-> 10 <-> 20 <-> 30
+Removed front: 5
+Removed rear: 30
+Deque: 10 <-> 20
+
+Task 3: Circular List
+Current: 1 | List: 1 -> 3 -> 2 -> (back to start)
+Current: 3 | List: 3 -> 2 -> 1 -> (back to start)
+Find 2: True
+Find 9: False
+Deleting node after current: 2
+Current: 3 | List: 3 -> 1 -> (back to start)
+
+Task 4: Stack (from Circular List)
+Peek: 300
+Popped: 300
+Peek: 200
+Popped: 200
+Popped: 100
+Is empty: True
