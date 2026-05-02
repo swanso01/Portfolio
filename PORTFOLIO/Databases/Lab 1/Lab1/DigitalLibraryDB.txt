@@ -1,0 +1,369 @@
+﻿Adding Books:
+Manage Books
+1. Add a new book
+2. Update book stock
+3. Delete a book
+4. View all books
+5. Search book by title
+6. Search book by genre
+7. Search book by author
+0. Back to Main Menu
+Enter your choice: 1
+Enter title: Testbook1
+Enter genre: Adventure
+Enter price: 10.29
+Enter stock level: 53
+Enter location (e.g., Aisle 5): 1
+Successfully added book: Testbook1
+
+
+Manage Books
+1. Add a new book
+2. Update book stock
+3. Delete a book
+4. View all books
+5. Search book by title
+6. Search book by genre
+7. Search book by author
+0. Back to Main Menu
+Enter your choice: 1
+Enter title: Testbook2
+Enter genre: Drama
+Enter price: 9.28
+Enter stock level: 2
+Enter location (e.g., Aisle 5): 2
+Successfully added book: Testbook2
+
+
+
+
+Manage Books
+1. Add a new book
+2. Update book stock
+3. Delete a book
+4. View all books
+5. Search book by title
+6. Search book by genre
+7. Search book by author
+0. Back to Main Menu
+Enter your choice: 1
+Enter title: Testbook3
+Enter genre: Horror
+Enter price: 12 
+Enter stock level: 10
+Enter location (e.g., Aisle 5): 3
+Successfully added book: Testbook3
+
+
+Adding Authors then assigning books:
+
+
+Manage Authors
+1. Add new author
+2. Update author info
+3. View all authors
+4. Assign book to author
+0. Back to Main Menu
+Enter your choice: 3
+No authors found.
+
+
+Manage Authors
+1. Add new author
+2. Update author info
+3. View all authors
+4. Assign book to author
+0. Back to Main Menu
+Enter your choice: 1
+Enter author name: TestAuthor1
+Enter bio: Im an author
+Enter contact info: jwodqmd@gmail.com
+Successfully added author: TestAuthor1
+
+
+Manage Authors
+1. Add new author
+2. Update author info
+3. View all authors
+4. Assign book to author
+0. Back to Main Menu
+Enter your choice: 1
+Enter author name: Testauthor2
+Enter bio: Im still an author
+Enter contact info: jdiqwdnsak@gmail.com
+Successfully added author: Testauthor2
+
+
+Manage Authors
+1. Add new author
+2. Update author info
+3. View all authors
+4. Assign book to author
+0. Back to Main Menu
+Enter your choice: 4
+Enter book ID: 9
+Enter author ID: 1
+Successfully assigned book 9 to author 1
+
+
+Manage Authors
+1. Add new author
+2. Update author info
+3. View all authors
+4. Assign book to author
+0. Back to Main Menu
+Enter your choice: 4
+Enter book ID: 10
+Enter author ID: 2
+Successfully assigned book 10 to author 2
+
+
+
+
+
+
+Creating Customers and Processing Payments
+
+
+Manage Customers
+1. Register new customer
+2. View all customers
+3. View customer purchase history
+0. Back to Main Menu
+Enter your choice: 1
+Enter customer name: Josh
+Enter email: Josh@gmail.com
+Enter phone: 19393920
+Successfully registered customer: Josh
+
+
+Manage Customers
+1. Register new customer
+2. View all customers
+3. View customer purchase history
+0. Back to Main Menu
+Enter your choice: 1
+Enter customer name: John
+Enter email: John@john.com
+Enter phone: 928173
+Successfully registered customer: John
+
+
+Manage Customers
+1. Register new customer
+2. View all customers
+3. View customer purchase history
+0. Back to Main Menu
+Enter your choice: 0
+
+
+Welcome to the Digital Library!
+1. Manage Books
+2. Manage Authors
+3. Manage Customers
+4. Create/View Orders
+5. Record Payments
+6. View Inventory
+7. Manage Suppliers
+0. Exit
+Enter your choice: 4
+
+
+Create/View Orders
+1. Create new order
+2. View all orders
+3. View pending orders
+0. Back to Main Menu
+Enter your choice: 1
+Enter customer ID: 1
+Enter book ID to add (or 'done' to finish): 1
+Enter quantity for book 1: 1
+Enter book ID to add (or 'done' to finish): done
+Created order 105.
+Successfully created order 105 for customer 1.
+
+
+Create/View Orders
+1. Create new order
+2. View all orders
+3. View pending orders
+0. Back to Main Menu
+Enter your choice: 1
+Enter customer ID: 2
+Enter book ID to add (or 'done' to finish): 3
+Enter quantity for book 3: 2
+Enter book ID to add (or 'done' to finish): 4
+Enter quantity for book 4: 2
+Enter book ID to add (or 'done' to finish): done
+Created order 106.
+Successfully created order 106 for customer 2.
+
+
+Process Payments
+
+
+Create/View Orders
+1. Create new order
+2. View all orders
+3. View pending orders
+0. Back to Main Menu
+Enter your choice: 2
+
+
+All Orders:
+ID: 102, Customer: Alice Smith, Date: 2023-10-01 10:30:00, Status: Shipped
+ID: 103, Customer: Bob Johnson, Date: 2023-10-28 14:15:00, Status: Pending
+ID: 104, Customer: Alice Smith, Date: 2023-09-15 09:05:00, Status: Delivered
+ID: 105, Customer: Alice Smith, Date: 2025-10-30 10:03:43, Status: Pending
+ID: 106, Customer: Bob Johnson, Date: 2025-10-30 10:03:59, Status: Pending
+
+
+
+
+Create/View Orders
+1. Create new order
+2. View all orders
+3. View pending orders
+0. Back to Main Menu
+Enter your choice: 0
+
+
+Welcome to the Digital Library!
+1. Manage Books
+2. Manage Authors
+3. Manage Customers
+4. Create/View Orders
+5. Record Payments
+6. View Inventory
+7. Manage Suppliers
+0. Exit
+Enter your choice: 5
+
+
+Record Payments
+1. Record a new payment
+0. Back to Main Menu
+Enter your choice: 1
+Enter order ID for payment: 105
+Enter payment amount: 13
+Enter payment method (e.g., Credit Card): Credit
+Successfully recorded payment for order 105.
+
+
+Record Payments
+1. Record a new payment
+0. Back to Main Menu
+Enter your choice: 1
+Enter order ID for payment: 106
+Enter payment amount: 15
+Enter payment method (e.g., Credit Card): Paypal
+Successfully recorded payment for order 106.
+
+
+
+
+Verify Inventory
+
+
+1. Manage Books
+2. Manage Authors
+3. Manage Customers
+4. Create/View Orders
+5. Record Payments
+6. View Inventory
+7. Manage Suppliers
+0. Exit
+Enter your choice: 6
+
+
+View Inventory
+1. View all book inventory details
+2. Generate low stock report
+0. Back to Main Menu
+Enter your choice: 1
+
+
+All Books:
+ID: 1, Title: The cool place, Genre: Adventure, Price: $10.00, Stock: 9999, Location: 3
+ID: 2, Title: The Hitchhiker's Guide to the Galaxy, Genre: Science Fiction, Price: $14.99, Stock: 100, Location: Sci-Fi Section, Shelf A1
+ID: 3, Title: 1984, Genre: Dystopian, Price: $12.50, Stock: 148, Location: Classics Section, Shelf B3
+ID: 4, Title: Dune, Genre: Science Fiction, Price: $18.75, Stock: 78, Location: Sci-Fi Section, Shelf A1
+ID: 5, Title: To Kill a Mockingbird, Genre: Fiction, Price: $11.99, Stock: 120, Location: Literature Section, Shelf C2
+ID: 6, Title: Sapiens: A Brief History of Humankind, Genre: Non-Fiction, Price: $22.00, Stock: 90, Location: History Section, Shelf D1
+ID: 7, Title: The Name of the Wind, Genre: Fantasy, Price: $19.95, Stock: 75, Location: Fantasy Section, Shelf F4
+ID: 8, Title: The Great Gatsby, Genre: Fiction, Price: $10.00, Stock: 200, Location: Classics Section, Shelf B3
+ID: 9, Title: Testbook1, Genre: Adventure, Price: $10.29, Stock: 53, Location: 1
+ID: 10, Title: Testbook2, Genre: Drama, Price: $9.28, Stock: 2, Location: 2
+ID: 11, Title: Testbook3, Genre: Horror, Price: $12.00, Stock: 10, Location: 3
+
+
+
+
+View Inventory
+1. View all book inventory details
+2. Generate low stock report
+0. Back to Main Menu
+Enter your choice:
+
+
+Search for books by author
+
+
+Manage Books
+1. Add a new book
+2. Update book stock
+3. Delete a book
+4. View all books
+5. Search book by title
+6. Search book by genre
+7. Search book by author
+0. Back to Main Menu
+Enter your choice: 7
+Enter author name to search for: testauthor1
+
+
+Search Results for 'testauthor1':
+ID: 9, Title: Testbook1, Stock: 53
+
+
+Supplier
+
+
+Manage Suppliers
+1. Add new supplier
+2. View all suppliers
+3. Assign book to supplier
+4. List books from a specific supplier
+0. Back to Main Menu
+Enter your choice: 1
+Enter supplier name: Josh
+Enter contact person: Josh
+Enter phone: 221
+Successfully added supplier: Josh
+
+
+Manage Suppliers
+1. Add new supplier
+2. View all suppliers
+3. Assign book to supplier
+4. List books from a specific supplier
+0. Back to Main Menu
+Enter your choice: 2
+
+
+All Suppliers:
+ID: 1, Name: Fiction Distributors Inc., Contact: Sarah Chen, Phone: 444-1000
+ID: 2, Name: Sci-Fi Warehouse, Contact: Mike Brown, Phone: 444-2000
+ID: 3, Name: Non-Fiction Source, Contact: David Lee, Phone: 444-3000
+ID: 4, Name: Josh, Contact: Josh, Phone: 221
+
+
+
+
+Manage Suppliers
+1. Add new supplier
+2. View all suppliers
+3. Assign book to supplier
+4. List books from a specific supplier
+0. Back to Main Menu
+Enter your choice:
