@@ -1,0 +1,331 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #121212;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #121212;
+  text-align: center;
+}
+
+.App-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-header {
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.App-header h1 {
+  font-size: 2rem;
+  margin: 0 0 10px;
+}
+
+.App-header p {
+  font-size: 1rem;
+  margin: 0 0 20px;
+}
+
+.App-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.App-content h2 {
+  font-size: 1.5rem;
+  color: #00a651;
+  margin: 0 0 10px;
+}
+
+.App-content p {
+  font-size: 1rem;
+  margin: 0 0 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #ffcc00;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-cart-icon {
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.App-footer {
+  background-color: #007a3d;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.App-footer a {
+  color: #00a651;
+  text-decoration: none;
+}
+
+.App-footer a:hover {
+  text-decoration: underline;
+}
+
+.App-link, .App-special-offer-button, .App-product-card-button, .App-order-button, .App-cart-order-button {
+  background-color: #00a651;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.App-link:hover, .App-special-offer-button:hover, .App-product-card-button:hover, .App-order-button:hover, .App-cart-order-button:hover {
+  background-color: #007a3d;
+}
+
+.App-special-offer-card, .App-product-card {
+  border: 1px solid #00a651;
+  background-color: #2a2a2a;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.App-product-card {
+  width: 200px;
+}
+
+.App-order-materials, .App-admin-dashboard, .App-cart {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.App-order-labor, .App-order-list {
+  margin-bottom: 20px;
+}
+
+.App-order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+}
+
+.App-order-item span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.App-order-quantity-input {
+  width: 50px;
+  padding: 5px;
+  margin: 0 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.App-order-quantity-input:focus {
+  outline: none;
+  border-color: #00a651;
+}
+
+.App-order-button {
+  min-width: 100px;
+  text-align: center;
+}
+
+.App-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.App-cart-item:last-child {
+  border-bottom: none;
+}
+
+.App-admin-input {
+  margin-bottom: 15px;
+}
+
+.App-admin-input input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: white;
+  margin-right: 10px;
+}
+
+.App-admin-services {
+  list-style: none;
+  padding: 0;
+}
+
+.App-admin-service-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.App-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.App-login-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.App-login-form {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-login-input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.App-login-button, .App-login-link button, .App-admin-link button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App-login-button:hover, .App-login-link button:hover, .App-admin-link button:hover {
+  background-color: #0056b3;
+}
+
+.App-cart-remove-button, .App-admin-service-item button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.App-cart-remove-button:hover, .App-admin-service-item button:hover {
+  background-color: #cc0000;
+}
+
+.App-not-found {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.App-login-inline {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.App-logo {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
