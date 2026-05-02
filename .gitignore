@@ -1,0 +1,19 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Node (if added later)
+node_modules/
+package-lock.json
+
+# Build outputs
+__pycache__/
+*.pyc
