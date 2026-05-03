@@ -86,18 +86,107 @@ h1 {
   padding: 0.55rem 0.9rem;
 }
 
-.main-nav a {
+.nav-tab {
   color: var(--muted);
   text-decoration: none;
   padding: 0.35rem 0.7rem;
   border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  transition: all 200ms ease;
 }
 
-.main-nav a:hover,
-.main-nav a:focus-visible {
+.nav-tab:hover,
+.nav-tab:focus-visible {
   border-color: var(--line);
   color: var(--accent);
+  outline: none;
 }
+
+.nav-tab.active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  animation: fadeInTab 300ms ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeInTab {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Labs Grid */
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.lab-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  padding: 1.2rem;
+  border-radius: 8px;
+  transition: all 200ms ease;
+}
+
+.lab-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.lab-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.lab-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.lab-card .doc-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Resources List */
+.resources-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.resources-list li {
+  animation: slideInLeft 400ms ease backwards;
+}
+
+.resources-list li:nth-child(1) { animation-delay: 50ms; }
+.resources-list li:nth-child(2) { animation-delay: 100ms; }
+.resources-list li:nth-child(3) { animation-delay: 150ms; }
+.resources-list li:nth-child(4) { animation-delay: 200ms; }
 
 main {
   width: min(980px, 92vw);
@@ -349,17 +438,7 @@ footer {
   }
 }
 
-/* Stagger animation for resource list items */
-#resources ul li {
-  animation: slideInLeft 400ms ease backwards;
-}
-
-#resources ul li:nth-child(1) { animation-delay: 50ms; }
-#resources ul li:nth-child(2) { animation-delay: 100ms; }
-#resources ul li:nth-child(3) { animation-delay: 150ms; }
-#resources ul li:nth-child(4) { animation-delay: 200ms; }
-#resources ul li:nth-child(5) { animation-delay: 250ms; }
-#resources ul li:nth-child(6) { animation-delay: 300ms; }
+/* Stagger animation for resource list items - REMOVED, now using resources-list grid */
 
 /* Responsive modal */
 @media (max-width: 850px) {

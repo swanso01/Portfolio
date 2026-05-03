@@ -167,7 +167,44 @@ class DocumentModal {
   }
 }
 
+/**
+ * Tab Navigation System
+ * Handles switching between different course sections
+ */
+class TabNavigation {
+  constructor() {
+    this.tabs = document.querySelectorAll('.nav-tab');
+    this.contents = document.querySelectorAll('.tab-content');
+    this.init();
+  }
+
+  init() {
+    this.tabs.forEach((tab) => {
+      tab.addEventListener('click', () => this.switchTab(tab));
+    });
+  }
+
+  switchTab(clickedTab) {
+    const tabName = clickedTab.dataset.tab;
+
+    // Remove active class from all tabs and contents
+    this.tabs.forEach((tab) => tab.classList.remove('active'));
+    this.contents.forEach((content) => content.classList.remove('active'));
+
+    // Add active class to clicked tab and corresponding content
+    clickedTab.classList.add('active');
+    const targetContent = document.getElementById(tabName);
+    if (targetContent) {
+      targetContent.classList.add('active');
+    }
+
+    // Scroll to top of main content
+    document.querySelector('main').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   new DocumentModal();
+  new TabNavigation();
 });
