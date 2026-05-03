@@ -182,20 +182,42 @@ class TabNavigation {
     this.tabs.forEach((tab) => {
       tab.addEventListener('click', () => this.switchTab(tab));
     });
+
+    const initialTab = window.location.hash.replace('#', '');
+    if (initialTab && document.getElementById(initialTab)) {
+      this.activateById(initialTab, false);
+    }
   }
 
   switchTab(clickedTab) {
-    const tabName = clickedTab.dataset.tab;
+    this.activateById(clickedTab.dataset.tab, true);
+  }
+
+  activateById(tabName, updateHash = true) {
+    if (!tabName) return;
 
     // Remove active class from all tabs and contents
     this.tabs.forEach((tab) => tab.classList.remove('active'));
     this.contents.forEach((content) => content.classList.remove('active'));
 
     // Add active class to clicked tab and corresponding content
-    clickedTab.classList.add('active');
+    const clickedTab = document.querySelector(`.nav-tab[data-tab="${tabName}"]`);
+    if (clickedTab) {
+      clickedTab.classList.add('active');
+      clickedTab.setAttribute('aria-selected', 'true');
+    }
+
     const targetContent = document.getElementById(tabName);
     if (targetContent) {
       targetContent.classList.add('active');
+    }
+
+    this.tabs.forEach((tab) => {
+      if (tab !== clickedTab) tab.setAttribute('aria-selected', 'false');
+    });
+
+    if (updateHash) {
+      history.replaceState(null, '', `#${tabName}`);
     }
 
     // Scroll to top of main content
@@ -203,8 +225,46 @@ class TabNavigation {
   }
 }
 
+class HeroParallax {
+  constructor() {
+    this.header = document.querySelector('.site-header');
+    this.bg = document.querySelector('.hero-bg');
+    this.glow = document.querySelector('.hero-glow');
+    this.rafId = null;
+    this.latestScrollY = window.scrollY;
+
+    if (!this.header || !this.bg || !this.glow) return;
+
+    this.onScroll = this.onScroll.bind(this);
+    this.update = this.update.bind(this);
+
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.update();
+  }
+
+  onScroll() {
+    this.latestScrollY = window.scrollY;
+    if (this.rafId) return;
+    this.rafId = window.requestAnimationFrame(this.update);
+  }
+
+  update() {
+    const progress = Math.min(this.latestScrollY / Math.max(this.header.offsetHeight, 1), 1);
+    const bgY = progress * 70;
+    const glowY = progress * 40;
+    const glowScale = 1 + progress * 0.08;
+
+    this.header.style.setProperty('--hero-parallax', `${bgY}px`);
+    this.header.style.setProperty('--hero-glow-y', `${glowY}px`);
+    this.header.style.setProperty('--hero-glow-scale', glowScale.toFixed(3));
+
+    this.rafId = null;
+  }
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   new DocumentModal();
   new TabNavigation();
+  new HeroParallax();
 });
